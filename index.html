@@ -1,16 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShowMeMyDay</title>
-    <link rel=
-
-
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
-</body>
+    <title>ShowMeMyDay</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    
+    <div class="container">
+      
+      <!-- ADD EACH TIMEBLOCK BELOW AS ITS ON DIV-->
+      <!-- Timeblocks go here -->
+      
+      <div class="row">
+        <div id="8" class="hour ADD FORMAT">8 AM</div>
+        <input id="8oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="1stbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="9" class="hour ADD FORMAT">9 AM</div>
+        <input id="9oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="2ndbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="10" class="hour ADD FORMAT">10 AM</div>
+        <input id="10oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="3rdbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="11" class="hour ADD FORMAT">11 AM</div>
+        <input id="11oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="4thbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="12" class="hour ADD FORMAT">12 PM</div>
+        <input id="12oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="5thbtn" class="saveBtn"></button>
+      </div>
+      
+      <div class="row">
+        <div id="1" class="hour ADD FORMAT">1 PM</div>
+        <input id="1oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="6thbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="2" class="hour ADD FORMAT">2 PM</div>
+        <input id="2oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="7thbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="3" class="hour ADD FORMAT">3 PM</div>
+        <input id="3oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="8thbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="4" class="hour ADD FORMAT">4 PM</div>
+        <input id="12oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="9thbtn" class="saveBtn"></button>
+      </div>
+
+      <div class="row">
+        <div id="5" class="hour ADD FORMAT">5 PM</div>
+        <input id="5oClock" class="userInputArea ADD FORMAT"></input>
+        <button id="10thbtn" class="saveBtn"></button>
+      </div>
+
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
+
+
+## Acceptance Criteria
+
+```md
+////GIVEN I am using a daily planner to create a schedule
+////WHEN I open the planner
+////THEN the current day is displayed at the top of the calendar
+////WHEN I scroll down
+////THEN I am presented with timeblocks for standard business hours
+WHEN I view the timeblocks for that day
+THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+////WHEN I click into a timeblock
+////THEN I can enter an event
+WHEN I click the save button for that timeblock
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
+```

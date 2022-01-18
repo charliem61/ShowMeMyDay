@@ -5,9 +5,3 @@ $("#currentDay").text(date);
 
 var current = moment().hours();
 
-const save = (event) => {
-    if (event.target === button){
-        if(this.classlist.contains(current))
-    }
-}
-
